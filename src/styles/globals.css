@@ -1,3 +1,140 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background: #191923;
+    scrollbar-width: none;
+    font-family: "Poppins", sans-serif;
+    color: #fafafc;
+    padding: 15px;
+}
+
+aside {
+    background: #20202a;
+    width: 100%;
+    height: calc(100vh - 30px); 
+    position:relative;
+}
+
+h6 {
+    color: #fafafc;
+}
+
+.sidebarFrame {
+    padding: 0 15px;
+}
+
+.header {
+    background: linear-gradient(159deg, rgba(37,37,50,0.98) 0%, rgba(35,35,45,0.98) 100%);
+}
+
+.name {
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.name a {
+    color: #fafafc;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.name:hover a {
+    color: #ffc107;
+}
+
+.small-text {
+    color: #8c8c8e;
+}
+
+.infoTable {
+    color: #8c8c8e;
+}
+
+.infoTable ul{
+    padding: 0;
+    margin: 0;
+}
+
+.infoTable ul li {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.infoTable ul li:last-child {
+    margin-bottom: 0;
+}
+
+.languageHeading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+}
+
+.languageHeading span {
+    color: #8c8c8e !important;
+    top: -6 !important;
+}
+
+.languageItem {
+    margin-bottom: 16px;
+}
+.librariesList ul{
+    margin: 0;
+    padding: 0;
+}
+
+.librariesList ul li{
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5px;
+}
+.librariesList li span{
+    font-size: 14px;
+    color: #8c8c8e;
+    padding-left: 8px;
+}
+.librariesList li:last-child {
+    margin-bottom: 0;
+}
+
+.cvLink {
+    color:#8c8c8e;
+    transition: 0.4s ease-in-out;
+}
+.cvLink:hover{
+    color: #fafafc;
+    text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
+}
+
+.socials {
+    background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.socials a {
+    color: #8c8c8e;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.socials a:hover {
+    text-shadow: 0 0 3px rgba(250, 250, 252, 0.4);
+    color: #fafafc;
+}
+
+.scrollArea {
+    overflow: hidden;
+}
