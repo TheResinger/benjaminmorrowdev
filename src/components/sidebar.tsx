@@ -10,8 +10,8 @@ import {
 
 export default function Sidebar() {
   return (
-    <div className="container mx-auto">
-      <aside className="w-72">
+    <div className="">
+      <aside className="w-72 ease-in-out duration-500s">
         {/* Header */}
         <div className="h-60 p-8 header">
           <div className="h-24 mb-4 flex justify-center">
