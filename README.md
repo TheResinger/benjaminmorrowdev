@@ -2,8 +2,8 @@
 # My personal portfolio
 
 ## TODO
-- [ ] Fix sidebar culling
-- [ ] Fix sidebar scrollable area
+- [x] Fix sidebar culling
+- [x] Fix sidebar scrollable area
 - [ ] Setup main region
 - [ ] Setup Navbar
 - [ ] Figure out nodemailer?

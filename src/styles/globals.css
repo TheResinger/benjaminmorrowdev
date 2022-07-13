@@ -135,6 +135,16 @@ h6 {
     color: #fafafc;
 }
 
-.scrollArea {
+/* .scrollArea {
     overflow: hidden;
+    scrollbar-width: none;
+} */
+.scrollContent{
+    max-height: calc(100vh - 328px);
+    /* position: fixed; */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollContent::-webkit-scrollbar {
+    display: none;
 }
