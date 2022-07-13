@@ -1,3 +1,10 @@
-# Create T3 App
 
-This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
+# My personal portfolio
+
+## TODO
+- [ ] Fix sidebar culling
+- [ ] Fix sidebar scrollable area
+- [ ] Setup main region
+- [ ] Setup Navbar
+- [ ] Figure out nodemailer?
+    - [ ] Figure out anti-bot tooling for this if I set this up
