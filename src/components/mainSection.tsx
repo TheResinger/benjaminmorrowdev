@@ -47,8 +47,6 @@ export default function MainPageContent() {
                     >
                       Explore Now
                     </button>
-                  </div>
-                  <div>
                     <button
                       type="button"
                       className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold text-white hover:text-yellow-50 transition-all text-xs"
