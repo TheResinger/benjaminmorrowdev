@@ -40,22 +40,22 @@ export default function MainPageContent() {
                   &lt;/<i>code</i>&gt;
                 </div>
                 <div>
-                  <a href="/projects" className="mb-4">
+                  <div className="mb-4">
                     <button
                       type="button"
                       className="exploreButton py-3 px-8 inline-flex justify-center items-center gap-2 border border-transparent font-semibol text-black hover:bg-yellow-600 transition-all text-sm font-semibold"
                     >
                       Explore Now
                     </button>
-                  </a>
-                  <a href="#">
+                  </div>
+                  <div>
                     <button
                       type="button"
                       className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold text-white hover:text-yellow-50 transition-all text-xs"
                     >
                       Hire Me &gt;
                     </button>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
