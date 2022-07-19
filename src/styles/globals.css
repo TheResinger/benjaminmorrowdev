@@ -7,12 +7,11 @@ body{
     scrollbar-width: none;
     font-family: "Poppins", sans-serif;
     color: #fafafc;
-    padding: 15px;
 }
 
 aside {
     background: #20202a;
-    width: 100%;
+    width: 18rem;
     height: calc(100vh - 30px); 
     position:relative;
     box-shadow: 0 3px 8px 0 rgba(15,15,20,0.2);
@@ -159,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     width: 100vw;
     padding-right: 80px;
-    height: calc(100vh - 30px);
+    /* height: calc(100vh - 30px); */
 }
 
 .curtain {
@@ -193,11 +192,51 @@ h1, h2, h3, h4, h5, h6 {
 .bannerTitle h1 {
     font-weight: 800;
 }
-
+.scrollingText {
+    min-height: 96px;
+    margin-bottom: 0px;
+}
 .scrollingText i{
     color: #ffc107;
 }
 
 .scrollingText span {
     color: #ffc107;
+}
+
+.mobileBar {
+    z-index: 99;
+    background: #20202a;
+}
+
+.exploreButton {
+    background: #ffc107;
+}
+
+@media (max-width: 1023px) {
+   aside > * {
+        display: none;
+   }
+   .socials {
+        display: none;
+   }
+   
+}
+
+@media (min-width: 640px) {
+    .sm\:heightCalc {
+        max-height: 100vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:heightCalc {
+        max-height: calc(100vh - 30px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:heightCalc {
+        max-height: calc(100vh - 30px);
+    }
 }

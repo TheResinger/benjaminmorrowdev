@@ -7,11 +7,12 @@ import {
   IconBrandGithub,
   IconBrandTwitter,
 } from "@tabler/icons";
+import { useEffect, useState } from "react";
 
 export default function Sidebar() {
   return (
-    <div className="">
-      <aside className="w-72 ease-in-out duration-500s">
+    <div>
+      <aside className="w-0 lg:w-72 ease-in-out duration-500s">
         {/* Header */}
         <div className="h-60 p-8 header">
           <div className="h-24 mb-4 flex justify-center">
