@@ -7,6 +7,7 @@ body{
     scrollbar-width: none;
     font-family: "Poppins", sans-serif;
     color: #fafafc;
+    letter-spacing: 0.5px;
 }
 
 aside {
@@ -20,6 +21,8 @@ aside {
 
 h1, h2, h3, h4, h5, h6 {
     color: #fafafc;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.2;
 }
 
 .no-scroll-bar {
@@ -211,6 +214,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .exploreButton {
     background: #ffc107;
+}
+
+.counterBox {
+    min-width: 45px;
+}
+.counterText {
+    color: #ffc107;
+
+}
+.counterPlus {
+    color: #ffc107;
+}
+.m-n15 {
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 @media (max-width: 1023px) {
