@@ -1,7 +1,7 @@
 import Typed from "typed.js";
 import { useRef, useEffect } from "react";
 
-export default function MainPageContent() {
+export default function MainPageContent({status}: {status: boolean}) {
   const componentRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function MainPageContent() {
   }, []);
 
   return (
-    <div className="mainContent flex ease-in-out duration-500 md:heightCalc h-screen">
+    <div className={`mainContent flex ease-in-out duration-500 md:heightCalc h-screen ${status ? "navActive": ""}`}>
       <div className="curtain ease-in-out duration-500s">
         <div className="overflow-hidden relative px-7">
           <div className="topSection pt-7 pb-0">

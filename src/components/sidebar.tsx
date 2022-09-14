@@ -9,10 +9,10 @@ import {
 } from "@tabler/icons";
 import { useEffect, useState } from "react";
 
-export default function Sidebar() {
+export default function Sidebar({status}: {status: boolean}) {
   return (
     <div>
-      <aside className="w-0 lg:w-72 ease-in-out duration-500s">
+      <aside className={`ease-in-out duration-500s w-0 lg:w-72 ${status ? "showBar w-screen h-full" : ""}`}>
         {/* Header */}
         <div className="h-60 p-8 header">
           <div className="h-24 mb-4 flex justify-center">
