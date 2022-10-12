@@ -4,7 +4,6 @@ import Sidebar from "../components/sidebar";
 import MainPageContent from "../components/mainSection";
 import { useState } from "react";
 import { IconDotsVertical } from "@tabler/icons";
-import { boolean } from "zod";
 
 const Home: NextPage = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -23,7 +22,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex no-scroll-bar p-0 md:pt-4">
+      <div className={`container mx-auto flex no-scroll-bar p-0 md:pt-4 heightNoMobileBar sm:heightCalc md:heightCalc lg:heightCalc`} >
         <Sidebar status={navActive}/>
         <MainPageContent status={navActive}/>
       </div>

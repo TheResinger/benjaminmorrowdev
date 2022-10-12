@@ -23,7 +23,7 @@ export default function MainPageContent({status}: {status: boolean}) {
   }, []);
 
   return (
-    <div className={`mainContent flex ease-in-out duration-500 md:heightCalc h-screen ${status ? "navActive": ""}`}>
+    <div className={`mainContent flex ease-in-out duration-500 heightCalc sm:heightCalc md:heightCalc lg:heightCalc  ${status ? "navActive": ""}`}>
       <div className="curtain ease-in-out duration-500s">
         <div className="overflow-hidden relative px-7">
           <div className="topSection pt-7 pb-0">

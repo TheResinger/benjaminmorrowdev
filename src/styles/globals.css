@@ -18,6 +18,10 @@ aside {
     box-shadow: 0 3px 8px 0 rgba(15,15,20,0.2);
     transition: 0.5s ease-in-out;
 }
+aside.navbarActive {
+    width: 100%;
+    height: calc(100vh - 4rem); 
+}
 
 h1, h2, h3, h4, h5, h6 {
     color: #fafafc;
@@ -92,8 +96,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .languageHeading span {
-    color: #8c8c8e !important;
-    top: -6 !important;
+    color: #fafafc;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.2;
 }
 
 .languageItem {
@@ -160,8 +165,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     width: 100vw;
-    padding-right: 80px;
-    /* height: calc(100vh - 30px); */
 }
 
 .curtain {
@@ -231,6 +234,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: -15px;
 }
 
+.navbarActive {
+    width: 100vw;
+}
+
+.heightNoMobileBar {
+    max-height: calc(100vh - 4rem)
+}
+
 @media (max-width: 1023px) {
     aside.showBar > * {
         display: flex;
@@ -242,17 +253,20 @@ h1, h2, h3, h4, h5, h6 {
         display: none;
    }
    div.mainContent.navActive {
-    display: none
+        display: none;
+        margin: 0;
    }
    div.mainContent.navActive > * {
         display: none;
+        margin: 0
    }
 }
 
 @media (min-width: 640px) {
     .sm\:heightCalc {
-        max-height: 100vh;
+        max-height: calc(100vh - 30px);
     }
+    
 }
 
 @media (min-width: 768px) {
@@ -263,6 +277,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1024px) {
     .lg\:heightCalc {
-        max-height: calc(100vh - 30px);
+        max-height: calc(100vh);
     }
 }
