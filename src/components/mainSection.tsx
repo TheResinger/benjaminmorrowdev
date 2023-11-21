@@ -45,19 +45,21 @@ export default function MainPageContent({ status }: { status: boolean }) {
         <section id="topHeadSection">
           <div
             className="background"
-            style={{ backgroundImage: `url(/bg.jpg)` }}
+            style={{ backgroundImage: `url(/bg.avif)` }}
           >
-            <div className="topBanner text-center lg:text-left">
-              <div className="bannerTitle flex flex-col">
-                <h1 className="text-4xl mb-2">
+            <div className="topBanner">
+              <div className="bannerTitle flex flex-col ">
+                <h1 className="text-4xl mb-2 text-center lg:text-left">
                   Discover My <br /> Talents
                 </h1>
-                <div className="scrollingText text-md">
-                  &lt;<i>code</i>&gt; I build <span ref={componentRef}></span>{" "}
+                <div className="scrollingText text-md pb-3">
+                  &lt;<i>code</i>&gt;<br/>
+                  &#8194;&#8194;I build <span ref={componentRef}></span>
+                  <br/>
                   &lt;/<i>code</i>&gt;
                 </div>
                 <div>
-                  <div className="mb-4">
+                  <div className="mb-4 " >
                     <button
                       type="button"
                       className="exploreButton py-3 px-8 inline-flex justify-center items-center gap-2 border border-transparent font-semibol text-black hover:bg-yellow-600 transition-all text-sm font-semibold"
@@ -93,7 +95,7 @@ export default function MainPageContent({ status }: { status: boolean }) {
             </div>
             <div className="carousel-container">
               { data.map((item, index) => {
-                return <h1 className="carousel-item" style={{transform: `translate(-${currentIndex * 100}%)`}} key={index}>{item}</h1>})
+                return <h4 className="carousel-item" style={{transform: `translate(-${currentIndex * 100}%)`}} key={index}>{item}</h4>})
               }
             </div>
             {/* <div className="grid gap-3 grid-cols-1 md:grid-cols-4 mx-3 mb-3">

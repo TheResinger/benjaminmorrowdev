@@ -6,35 +6,32 @@ import {
   IconBrandGithub,
   IconBrandTwitter,
 } from "@tabler/icons";
+import me from "../../public/face.png";
 
 export default function Sidebar({ status }: { status: boolean }) {
   return (
-    <aside
-      className={` ${
-        status ? "showBar navbarActive " : "w-0 lg:w-96"
-      }`}
-    >
+    <aside className={` ${status ? "showBar navbarActive " : "w-0 lg:w-96"}`}>
       <section id="header">
-        <div className="h-fit w-full p-8 header lg:h-fit">
-          <div className="h-24 mb-4 flex justify-center">
+        <div className="h-fit w-full p-8 header lg:h-fit flex flex-col">
+          <div className="h-24 w-24 mb-4 mx-auto relative">
             <a href="https://www.linkedin.com/in/morrowbenjamin/">
               <Image
-                src="/face.png"
-                alt="Picture of my face"
+                src={me}
+                layout="fill"
                 className="rounded-full"
-                width={96}
-                height={96}
+                alt="Picture of me"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </a>
           </div>
-          <h5 className="mb-2.5 text-center text-lg name">
+          <h1 className="mb-2.5 text-center text-lg name">
             <a>Benjamin Morrow</a>
-          </h5>
-          <div className="small-text text-center text-sm">
+          </h1>
+          <h2 className="small-text text-center text-sm">
             Full Stack Developer
             <br />
             UI/UX Designer
-          </div>
+          </h2>
         </div>
       </section>
       <section id="info" className="scrollableArea">
@@ -42,15 +39,15 @@ export default function Sidebar({ status }: { status: boolean }) {
           <div className="infoTable py-4 px-4">
             <ul>
               <li>
-                <h6 className="text-base">State:</h6>
+                <h3 className="text-base">State:</h3>
                 <span className="text-base">Florida</span>
               </li>
               <li>
-                <h6 className="text-base">City:</h6>
+                <h4 className="text-base">City:</h4>
                 <span className="text-base">Orlando</span>
               </li>
               <li>
-                <h6 className="text-base">Age:</h6>
+                <h5 className="text-base">Age:</h5>
                 <span className="text-base">24</span>
               </li>
             </ul>
@@ -97,18 +94,28 @@ export default function Sidebar({ status }: { status: boolean }) {
           </div>
         </div>
       </section>
-      <section id="socials" className={`place-items-center justify-between ${status ? "" : "hidden lg:flex"}`}>
+      <section
+        id="socials"
+        className={`place-items-center justify-between ${
+          status ? "" : "hidden lg:flex"
+        }`}
+      >
         <div>
-          <a href="https://www.linkedin.com/in/morrowbenjamin/">
+          <a
+            href="https://www.linkedin.com/in/morrowbenjamin/"
+            aria-label="Quick link to my LinkedIn Page"
+          >
             <IconBrandLinkedin size={30} />
           </a>
         </div>
         <div>
-          <a href="https://github.com/TheResinger">
+          <a
+            href="https://github.com/TheResinger"
+            aria-label="Quick link to my GitHub Page"
+          >
             <IconBrandGithub size={30} />
           </a>
         </div>
-        
       </section>
     </aside>
   );
