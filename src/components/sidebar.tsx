@@ -31,7 +31,7 @@ export default function Sidebar({ status }: { status: boolean }) {
             <a>Benjamin Morrow</a>
           </h5>
           <div className="small-text text-center text-sm">
-            Front-end Developer
+            Full Stack Developer
             <br />
             UI/UX Designer
           </div>
