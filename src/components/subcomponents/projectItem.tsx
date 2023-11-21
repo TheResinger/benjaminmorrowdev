@@ -1,4 +1,5 @@
 import { IconBrandGithub, IconWorld } from "@tabler/icons";
+import Image from "next/image";
 
 export default function ProjectItem({
   imagePath,
@@ -18,7 +19,7 @@ export default function ProjectItem({
   return (
     <div className="card border border-gray-200 rounded-lg shadow  dark:border-gray-700">
       <a href={imageClickPath}>
-        <img className="rounded-t-lg" src={imagePath} alt="" />
+        <Image className="rounded-t-lg" src={imagePath} alt="" />
       </a>
       <div className="p-5">
         <a href={imageClickPath}>
