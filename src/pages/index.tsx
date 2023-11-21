@@ -14,15 +14,15 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div>
-      <div className="container mobileBar h-16 lg:h-0 flex lg:hidden lg:w-0 mx-auto">
+    <div className="container mx-auto">
+      <div className="mobileBar flex lg:hidden lg:w-0 mx-auto">
         <div className="mobileBarContent p-5">
           <div className="">
             <IconDotsVertical onClick={toggleNav}/>
           </div>
         </div>
       </div>
-      <div className={`container mx-auto flex no-scroll-bar p-0 md:pt-4 heightNoMobileBar sm:heightCalc md:heightCalc lg:heightCalc`} >
+      <div className={`mx-auto flex py-0 lg:py-4 heightCalc`} >
         <Sidebar status={navActive}/>
         <MainPageContent status={navActive}/>
       </div>
