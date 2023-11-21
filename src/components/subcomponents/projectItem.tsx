@@ -32,10 +32,10 @@ export default function ProjectItem({
         </p>
       </div>
       <div className="grid grid-cols-4 place-items-center pb-3 px-3">
-        <a href={githubLink} target="_blank" className="col-start-1">
+        <a href={githubLink} target="_blank" rel="noreferrer noopener" className="col-start-1">
           <IconBrandGithub size={30} />
         </a>
-        <a href={deployedLink} target="_blank" className="col-start-4">
+        <a href={deployedLink} target="_blank" rel="noreferrer noopener" className="col-start-4">
             <IconWorld size={30}/>
         </a>
       </div>
