@@ -1,12 +1,10 @@
-export default function GridItem({
-  number,
-  plus,
-  text,
-}: {
+interface ComponentTypes {
   number: number;
   plus: boolean;
   text: string;
-}) {
+};
+
+const GridItem = ({ number, plus, text }: ComponentTypes) => {
   return (
     <div className="gridItem px-4">
       <div className="flex items-center justify-center">
@@ -16,10 +14,10 @@ export default function GridItem({
             {plus ? "+" : ""}
           </span>
         </div>
-        <h2 className="align-middle text-center text-sm font-normal">
-          {text}
-        </h2>
+        <h2 className="align-middle text-center text-sm font-normal">{text}</h2>
       </div>
     </div>
   );
-}
+};
+
+export default GridItem;

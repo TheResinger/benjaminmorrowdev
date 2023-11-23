@@ -2,12 +2,12 @@ import Slider from "react-slick";
 import ProjectItem from "./projectItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import data from "../../data/projectData.json" //This should eventually be moved to a database call.
+import data from "../../data/projectData.json"; //This should eventually be moved to a database call.
 
-export default function Carousel() {
+const Carousel = () => {
   const settings = {
     accessibility: true,
-    // adaptiveHeight: true,
+    adaptiveHeight: true,
     autoplay: true,
     dots: true,
     infinite: true,
@@ -36,7 +36,6 @@ export default function Carousel() {
       },
     ],
   };
-
   return (
     <div className="w-[85%] mx-auto">
       <Slider {...settings}>
@@ -58,4 +57,6 @@ export default function Carousel() {
       </Slider>
     </div>
   );
-}
+};
+
+export default Carousel;
