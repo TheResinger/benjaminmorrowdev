@@ -16,7 +16,7 @@ export default function GridItem({
             {plus ? "+" : ""}
           </span>
         </div>
-        <h2 className="align-middle text-sm font-normal">
+        <h2 className="align-middle text-center text-sm font-normal">
           {text}
         </h2>
       </div>

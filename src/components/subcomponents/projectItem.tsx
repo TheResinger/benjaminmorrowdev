@@ -8,6 +8,8 @@ export default function ProjectItem({
   projectDescription,
   githubLink,
   deployedLink,
+  deployed,
+  codebase,
 }: {
   imagePath: string;
   imageClickPath: string;
@@ -15,14 +17,28 @@ export default function ProjectItem({
   projectDescription: string;
   githubLink: string;
   deployedLink: string;
+  deployed: boolean;
+  codebase: boolean;
 }) {
+
   return (
-    <div className="card border border-gray-200 rounded-lg shadow  dark:border-gray-700">
-      <a href={imageClickPath}>
-        <Image className="rounded-t-lg" src={imagePath} alt="" />
-      </a>
-      <div className="p-5">
-        <a href={imageClickPath}>
+    <div className="card border flex flex-col border-gray-200 rounded-lg shadow dark:border-gray-700">
+      <div
+        className="relative"
+        style={{ width: "100%", height: "0", paddingBottom: "100%" }}
+      >
+        <a href={deployed ? imageClickPath : undefined} target="_blank" rel="noreferrer noopener">
+          <Image
+            className="rounded-t-lg"
+            src={imagePath}
+            alt="Picture of Project"
+            layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </a>
+      </div>
+      <div className="p-5 flex-grow">
+        <a href={deployed ? imageClickPath : undefined} target="_blank" rel="noreferrer noopener">
           <h1 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">
             {projectName}
           </h1>
@@ -31,12 +47,22 @@ export default function ProjectItem({
           {projectDescription}
         </p>
       </div>
-      <div className="grid grid-cols-4 place-items-center pb-3 px-3">
-        <a href={githubLink} target="_blank" rel="noreferrer noopener" className="col-start-1">
-          <IconBrandGithub size={30} />
+      <div className="bottom-0 grid grid-cols-4 place-items-center pb-3 px-3">
+        <a
+          href={codebase ? githubLink : undefined}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="col-start-1"
+        >
+          <IconBrandGithub size={30} color={codebase ? "white": "grey"}/>
         </a>
-        <a href={deployedLink} target="_blank" rel="noreferrer noopener" className="col-start-4">
-            <IconWorld size={30}/>
+        <a
+          href={deployed ? deployedLink : undefined}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="col-start-4"
+        >
+          <IconWorld size={30} color={deployed ? "white": "grey"}/>
         </a>
       </div>
     </div>

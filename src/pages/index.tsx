@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className={`mx-auto flex py-0 lg:py-4 heightCalc`}>
+        <div className="mx-auto flex py-0 lg:py-4 heightCalc">
           <Sidebar status={navActive} />
           <MainPageContent status={navActive} />
         </div>
