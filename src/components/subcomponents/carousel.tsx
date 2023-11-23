@@ -2,59 +2,9 @@ import Slider from "react-slick";
 import ProjectItem from "./projectItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import data from "../../data/projectData.json" //This should eventually be moved to a database call.
 
 export default function Carousel() {
-    // This should eventually move over to a database or a dedicated json file, however currently unnecessary.
-    const data = [
-    {
-      projectName: "Typing Speed Test",
-      imagePath: "/tst.png",
-      projectDescription:
-        "A web application designed to test a users touch typing speed.",
-      githubPath: "https://github.com/TheResinger/TypingSpeedTest",
-      deployedPath: "https://theresinger.github.io/TypingSpeedTest/",
-      deployed: true,
-      codebase: true,
-    },
-    {
-      projectName: "SkyBeat",
-      imagePath: "/skybeat.png",
-      projectDescription:
-        "Skybeat is a new social media for music enthuasists.",
-      githubPath: "https://github.com/TheResinger/SkyBeat",
-      deployedPath: "https://google.com",
-      deployed: false,
-      codebase: true,
-    },
-    {
-      projectName: "Cards",
-      imagePath: "/placeholder.png",
-      projectDescription: "An online Cards Against Humanity game",
-      githubPath: "https://github.com/TheResinger/cards",
-      deployedPath: "https://cards.resinger.dev",
-      deployed: false,
-      codebase: true,
-    },
-    {
-      projectName: "Placeholder",
-      imagePath: "/placeholder.png",
-      projectDescription: "Placeholder",
-      githubPath: "https://github.com/TheResinger/cards",
-      deployedPath: "https://cards.resinger.dev",
-      deployed: false,
-      codebase: false,
-    },
-    {
-      projectName: "Cards",
-      imagePath: "/placeholder.png",
-      projectDescription: "Placeholder",
-      githubPath: "https://github.com/TheResinger/cards",
-      deployedPath: "https://cards.resinger.dev",
-      deployed: false,
-      codebase: false,
-    },
-  ];
-
   const settings = {
     accessibility: true,
     // adaptiveHeight: true,
@@ -88,7 +38,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-[85%] mx-auto ">
+    <div className="w-[85%] mx-auto">
       <Slider {...settings}>
         {data.map((item, index) => {
           return (

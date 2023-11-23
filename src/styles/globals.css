@@ -58,7 +58,6 @@ aside {
 }
 
 .scrollableArea {
-    /* height: calc(100vh - 4.5rem); */
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -72,7 +71,6 @@ aside {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* height:100%; */
 }
 
 .scrollableAreaMain::-webkit-scrollbar{
@@ -182,7 +180,6 @@ h6 {
 
 .cvLink {
   color: #8c8c8e;
-  /* transition: 0.5s ease-in-out; */
 }
 .cvLink:hover {
   color: #fafafc;
