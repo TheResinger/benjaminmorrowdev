@@ -1,10 +1,11 @@
 import Typed from "typed.js";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import GridItem from "./subcomponents/gridItem";
 import Carousel from "./subcomponents/carousel";
 
 export default function MainPageContent({ status }: { status: boolean }) {
   const componentRef = useRef<HTMLSpanElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const typed = new Typed(componentRef.current!, {
@@ -26,9 +27,7 @@ export default function MainPageContent({ status }: { status: boolean }) {
 
   return (
     <div
-      className={`flex ${
-        status ? "mainContent navActive w-0" : "mainContent"
-      }`}
+      className={`flex ${status ? "mainContent navActive w-0" : "mainContent"}`}
     >
       <div className="curtain scrollableAreaMain flex flex-col">
         <section id="topHeadSection">
@@ -53,6 +52,12 @@ export default function MainPageContent({ status }: { status: boolean }) {
                     <button
                       type="button"
                       className="exploreButton py-3 px-8 inline-flex justify-center items-center gap-2 border border-transparent font-semibol text-black hover:bg-yellow-600 transition-all text-sm font-semibold"
+                      onClick={() => {
+                        sectionRef.current?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }}
                     >
                       Explore Now
                     </button>
@@ -68,18 +73,37 @@ export default function MainPageContent({ status }: { status: boolean }) {
             </div>
           </div>
         </section>
-        <section id="statsGrid">
-          <div className="grid grid-cols-2 md:grid-cols-4 pt-7">
+        <section id="statsGrid" className="py-4">
+          <div className="grid gap-4 grid-cols-2 md:grid-cols-4 px-4">
             <GridItem number={3} plus={true} text="Years Experience" />
             <GridItem number={35} plus={false} text="Projects Completed" />
             <GridItem number={22} plus={false} text="Happy Customers" />
             <GridItem number={1} plus={false} text="Full-Stack Bootcamp" />
           </div>
         </section>
-        <section id="completedProjects" className="mb-4">
+        <section id="aboutMe" className="py-2">
+          <div className="grid grid-cols-3 md:grid-cols-4 px-4 pb-4">
+            <div className="col-start-1 col-end-5">
+              <h3 className="text-2xl text-center">About Me</h3>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 md:grid-cols-4 px-12">
+            <div className="card border border-gray-200 rounded-lg shadow dark:border-gray-700 col-start-1 col-end-5">
+              <div className="p-5 flex-grow">
+                <div className="header">
+                  <h4 className="text-3xl">Hello there! 👋 I'm Benjamin</h4>
+                </div>
+                <div>
+                  <p>I'm a passionate and dedicated Full Stack Software Developer with a flair for crafting robust and user-friendly applications. I thrive in the dynamic world of web development, where creativity meets functionality.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="completedProjects" className="pb-4 pt-2" ref={sectionRef}>
           <div className="grid grid-cols-3 md:grid-cols-4 px-3 pb-4">
             <div className="col-start-1 col-end-5">
-              <h3 className="text-2xl text-center">Completed Projects</h3>
+              <h5 className="text-2xl text-center">Completed Projects</h5>
             </div>
           </div>
           <Carousel />

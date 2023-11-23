@@ -8,7 +8,7 @@ export default function GridItem({
   text: string;
 }) {
   return (
-    <div className="gridItem px-4 pb-7">
+    <div className="gridItem px-4">
       <div className="flex items-center justify-center">
         <div className="flex counterBox items-center justify-center">
           <span className="counterText font-semibold text-2xl">{number}</span>
