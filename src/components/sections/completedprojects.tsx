@@ -14,4 +14,6 @@ const CompletedProjects = forwardRef<HTMLElement>(({}, ref) => {
   );
 });
 
+CompletedProjects.displayName = 'CompletedProjects';
+
 export default CompletedProjects;

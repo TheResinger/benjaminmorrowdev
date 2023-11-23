@@ -13,4 +13,6 @@ const StatsGrid = () => {
   );
 };
 
+StatsGrid.displayName = 'StatsGrid';
+
 export default StatsGrid;

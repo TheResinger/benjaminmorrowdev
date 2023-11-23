@@ -27,4 +27,6 @@ const AboutMe = () => {
   );
 }
 
+AboutMe.displayName = 'AboutMe';
+
 export default AboutMe;

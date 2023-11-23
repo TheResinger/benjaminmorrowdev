@@ -20,4 +20,6 @@ const GridItem = ({ number, plus, text }: ComponentTypes) => {
   );
 };
 
+GridItem.displayName = 'GridItem';
+
 export default GridItem;

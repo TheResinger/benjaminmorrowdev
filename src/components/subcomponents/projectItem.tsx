@@ -69,4 +69,6 @@ const ProjectItem = ({imagePath, imageClickPath, projectName, projectDescription
   );
 };
 
+ProjectItem.displayName = 'ProjectItem';
+
 export default ProjectItem;
