@@ -2,9 +2,12 @@ import Slider from 'react-slick'
 import ProjectItem from './projectItem'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import data from '../../data/projectData.json' //This should eventually be moved to a database call.
+import data from '../../data/projectData.json' // This should eventually be moved to a database call.
 
-const Carousel = () => {
+const Carousel = (): JSX.Element => {
+  // let Data = data.Projects;
+  let Data = data.DummyData
+
   const settings = {
     accessibility: true,
     adaptiveHeight: true,
@@ -39,7 +42,7 @@ const Carousel = () => {
   return (
     <div className="w-[85%] mx-auto">
       <Slider {...settings}>
-        {data.map((item, index) => {
+        {Data.map((item, index) => {
           return <ProjectItem key={index} imagePath={item.imagePath} imageClickPath={item.deployedPath} projectName={item.projectName} projectDescription={item.projectDescription} githubLink={item.githubPath} deployedLink={item.deployedPath} deployed={item.deployed} codebase={item.codebase} />
         })}
       </Slider>

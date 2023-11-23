@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { IconCheck, IconDownload, IconBrandLinkedin, IconBrandGithub, IconBrandTwitter } from '@tabler/icons'
+import { IconCheck, IconDownload, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons'
 import me from '../../public/face.png'
 
 export default function Sidebar({ status }: { status: boolean }) {

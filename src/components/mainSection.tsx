@@ -17,13 +17,15 @@ export default function MainPageContent({ status }: { status: boolean }) {
       backDelay: 1000,
       loop: true,
     })
-    return () => typed.destroy()
+    return () => {
+      typed.destroy()
+    }
   }, [])
   return (
     <div className={`flex ${status ? 'mainContent navActive w-0' : 'mainContent'}`}>
       <div className="curtain scrollableAreaMain flex flex-col">
         <section id="topHeadSection">
-          <div className="background" style={{ backgroundImage: `url(/bg.avif)` }}>
+          <div className="background" style={{ backgroundImage: 'url(/bg.avif)' }}>
             <div className="topBanner text-center lg:text-left">
               <div className="bannerTitle flex flex-col ">
                 <h1 className="text-4xl m-2">

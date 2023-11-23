@@ -12,7 +12,7 @@ interface ComponentTypes {
   codebase: boolean
 }
 
-const ProjectItem = ({ imagePath, imageClickPath, projectName, projectDescription, githubLink, deployedLink, deployed, codebase }: ComponentTypes) => {
+const ProjectItem = ({ imagePath, imageClickPath, projectName, projectDescription, githubLink, deployedLink, deployed, codebase }: ComponentTypes): JSX.Element => {
   return (
     <div className="card border flex flex-col border-gray-200 rounded-lg shadow dark:border-gray-700">
       <div className="relative" style={{ width: '100%', height: '0', paddingBottom: '100%' }}>

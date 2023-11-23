@@ -4,7 +4,7 @@ interface ComponentTypes {
   text: string
 }
 
-const GridItem = ({ number, plus, text }: ComponentTypes) => {
+const GridItem = ({ number, plus, text }: ComponentTypes): JSX.Element => {
   return (
     <div className="gridItem px-4">
       <div className="flex items-center justify-center">
