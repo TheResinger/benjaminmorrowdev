@@ -1,13 +1,13 @@
 import Typed from "typed.js";
 import { useRef, useEffect } from "react";
-import GridItem from "./subcomponents/gridItem";
-import Carousel from "./subcomponents/carousel";
-import AboutMe from "./subcomponents/aboutme";
+import AboutMe from "./sections/aboutme";
+import StatsGrid from "./sections/statsgrid";
+import CompletedProjects from "./sections/completedprojects";
 
 export default function MainPageContent({ status }: { status: boolean }) {
-  const componentRef = useRef<HTMLSpanElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-
+  const componentRef = useRef<null | HTMLSpanElement>(null);
+  const sectionRef = useRef<null | HTMLElement>(null);
+  
   useEffect(() => {
     const typed = new Typed(componentRef.current!, {
       strings: [
@@ -25,7 +25,6 @@ export default function MainPageContent({ status }: { status: boolean }) {
     });
     return () => typed.destroy();
   }, []);
-
   return (
     <div
       className={`flex ${status ? "mainContent navActive w-0" : "mainContent"}`}
@@ -74,24 +73,9 @@ export default function MainPageContent({ status }: { status: boolean }) {
             </div>
           </div>
         </section>
-        <section id="statsGrid" className="py-4">
-          <div className="grid gap-4 grid-cols-2 md:grid-cols-4 px-4">
-            <GridItem number={3} plus={true} text="Years Experience" />
-            <GridItem number={35} plus={false} text="Projects Completed" />
-            <GridItem number={22} plus={false} text="Happy Customers" />
-            <GridItem number={1} plus={false} text="Full-Stack Bootcamp" />
-          </div>
-        </section>
+        <StatsGrid />
         <AboutMe />
-        <section id="completedProjects" className="pb-4 pt-2" ref={sectionRef}>
-          <div className="grid grid-cols-3 md:grid-cols-4 px-3 pb-4">
-            <div className="col-start-1 col-end-5">
-              <h5 className="text-2xl text-center">Completed Projects</h5>
-            </div>
-          </div>
-          <Carousel />
-        </section>
-        
+        <CompletedProjects ref={sectionRef} />
       </div>
     </div>
   );

@@ -1,16 +1,7 @@
 import { IconBrandGithub, IconWorld } from "@tabler/icons";
 import Image from "next/image";
 
-export default function ProjectItem({
-  imagePath,
-  imageClickPath,
-  projectName,
-  projectDescription,
-  githubLink,
-  deployedLink,
-  deployed,
-  codebase,
-}: {
+interface ComponentTypes {
   imagePath: string;
   imageClickPath: string;
   projectName: string;
@@ -19,15 +10,20 @@ export default function ProjectItem({
   deployedLink: string;
   deployed: boolean;
   codebase: boolean;
-}) {
+};
 
+const ProjectItem = ({imagePath, imageClickPath, projectName, projectDescription, githubLink, deployedLink, deployed, codebase}: ComponentTypes) => {
   return (
     <div className="card border flex flex-col border-gray-200 rounded-lg shadow dark:border-gray-700">
       <div
         className="relative"
         style={{ width: "100%", height: "0", paddingBottom: "100%" }}
       >
-        <a href={deployed ? imageClickPath : undefined} target="_blank" rel="noreferrer noopener">
+        <a
+          href={deployed ? imageClickPath : undefined}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Image
             className="rounded-t-lg"
             src={imagePath}
@@ -38,7 +34,11 @@ export default function ProjectItem({
         </a>
       </div>
       <div className="p-5 flex-grow">
-        <a href={deployed ? imageClickPath : undefined} target="_blank" rel="noreferrer noopener">
+        <a
+          href={deployed ? imageClickPath : undefined}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <h1 className="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">
             {projectName}
           </h1>
@@ -54,7 +54,7 @@ export default function ProjectItem({
           rel="noreferrer noopener"
           className="col-start-1"
         >
-          <IconBrandGithub size={30} color={codebase ? "white": "grey"}/>
+          <IconBrandGithub size={30} color={codebase ? "white" : "grey"} />
         </a>
         <a
           href={deployed ? deployedLink : undefined}
@@ -62,9 +62,13 @@ export default function ProjectItem({
           rel="noreferrer noopener"
           className="col-start-4"
         >
-          <IconWorld size={30} color={deployed ? "white": "grey"}/>
+          <IconWorld size={30} color={deployed ? "white" : "grey"} />
         </a>
       </div>
     </div>
   );
-}
+};
+
+ProjectItem.displayName = 'ProjectItem';
+
+export default ProjectItem;

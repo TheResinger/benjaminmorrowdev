@@ -1,4 +1,4 @@
-export default function AboutMe() {
+const AboutMe = () => {
   return (
     <section id="aboutMe" className="py-2">
       <div className="grid grid-cols-3 md:grid-cols-4 px-4 pb-4">
@@ -26,3 +26,7 @@ export default function AboutMe() {
     </section>
   );
 }
+
+AboutMe.displayName = 'AboutMe';
+
+export default AboutMe;
