@@ -2,6 +2,7 @@ import Typed from "typed.js";
 import { useRef, useEffect } from "react";
 import GridItem from "./subcomponents/gridItem";
 import Carousel from "./subcomponents/carousel";
+import AboutMe from "./subcomponents/aboutme";
 
 export default function MainPageContent({ status }: { status: boolean }) {
   const componentRef = useRef<HTMLSpanElement>(null);
@@ -81,25 +82,7 @@ export default function MainPageContent({ status }: { status: boolean }) {
             <GridItem number={1} plus={false} text="Full-Stack Bootcamp" />
           </div>
         </section>
-        <section id="aboutMe" className="py-2">
-          <div className="grid grid-cols-3 md:grid-cols-4 px-4 pb-4">
-            <div className="col-start-1 col-end-5">
-              <h3 className="text-2xl text-center">About Me</h3>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 md:grid-cols-4 px-12">
-            <div className="card border border-gray-200 rounded-lg shadow dark:border-gray-700 col-start-1 col-end-5">
-              <div className="p-5 flex-grow">
-                <div className="header">
-                  <h4 className="text-3xl">Hello there! 👋 I'm Benjamin</h4>
-                </div>
-                <div>
-                  <p>I'm a passionate and dedicated Full Stack Software Developer with a flair for crafting robust and user-friendly applications. I thrive in the dynamic world of web development, where creativity meets functionality.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AboutMe />
         <section id="completedProjects" className="pb-4 pt-2" ref={sectionRef}>
           <div className="grid grid-cols-3 md:grid-cols-4 px-3 pb-4">
             <div className="col-start-1 col-end-5">
