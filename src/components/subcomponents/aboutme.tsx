@@ -10,11 +10,11 @@ export default function AboutMe() {
         <div className="card border border-gray-200 rounded-lg shadow dark:border-gray-700 col-start-1 col-end-5">
           <div className="p-5 flex-grow">
             <div className="header">
-              <h4 className="text-3xl">Hello there! 👋 I'm Benjamin</h4>
+              <h4 className="text-3xl">Hello there! 👋 I&apos;m Benjamin</h4>
             </div>
             <div>
               <p>
-                I'm a passionate and dedicated Full Stack Software Developer
+                I&apos;m a passionate and dedicated Full Stack Software Developer
                 with a flair for crafting robust and user-friendly applications.
                 I thrive in the dynamic world of web development, where
                 creativity meets functionality.
