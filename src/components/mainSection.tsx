@@ -1,40 +1,29 @@
-import Typed from "typed.js";
-import { useRef, useEffect } from "react";
-import AboutMe from "./sections/aboutme";
-import StatsGrid from "./sections/statsgrid";
-import CompletedProjects from "./sections/completedprojects";
+import Typed from 'typed.js'
+import { useRef, useEffect } from 'react'
+import AboutMe from './sections/aboutme'
+import StatsGrid from './sections/statsgrid'
+import CompletedProjects from './sections/completedprojects'
 
 export default function MainPageContent({ status }: { status: boolean }) {
-  const componentRef = useRef<null | HTMLSpanElement>(null);
-  const sectionRef = useRef<null | HTMLElement>(null);
-  
+  const componentRef = useRef<null | HTMLSpanElement>(null)
+  const sectionRef = useRef<null | HTMLElement>(null)
+
   useEffect(() => {
     const typed = new Typed(componentRef.current!, {
-      strings: [
-        "Modern Web Interfaces",
-        "Full Stack Applications",
-        "Mobile Applications",
-        "Serverless Applications",
-        "APIs",
-      ],
+      strings: ['Modern Web Interfaces', 'Full Stack Applications', 'Mobile Applications', 'Serverless Applications', 'APIs'],
       startDelay: 400,
       typeSpeed: 60,
       backSpeed: 30,
       backDelay: 1000,
       loop: true,
-    });
-    return () => typed.destroy();
-  }, []);
+    })
+    return () => typed.destroy()
+  }, [])
   return (
-    <div
-      className={`flex ${status ? "mainContent navActive w-0" : "mainContent"}`}
-    >
+    <div className={`flex ${status ? 'mainContent navActive w-0' : 'mainContent'}`}>
       <div className="curtain scrollableAreaMain flex flex-col">
         <section id="topHeadSection">
-          <div
-            className="background"
-            style={{ backgroundImage: `url(/bg.avif)` }}
-          >
+          <div className="background" style={{ backgroundImage: `url(/bg.avif)` }}>
             <div className="topBanner text-center lg:text-left">
               <div className="bannerTitle flex flex-col ">
                 <h1 className="text-4xl m-2">
@@ -54,17 +43,13 @@ export default function MainPageContent({ status }: { status: boolean }) {
                       className="exploreButton py-3 px-8 inline-flex justify-center items-center gap-2 border border-transparent font-semibol text-black hover:bg-yellow-600 transition-all text-sm font-semibold"
                       onClick={() => {
                         sectionRef.current?.scrollIntoView({
-                          behavior: "smooth",
-                          block: "start",
-                        });
-                      }}
-                    >
+                          behavior: 'smooth',
+                          block: 'start',
+                        })
+                      }}>
                       Explore Now
                     </button>
-                    <button
-                      type="button"
-                      className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold text-white hover:text-yellow-50 transition-all text-xs"
-                    >
+                    <button type="button" className="py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold text-white hover:text-yellow-50 transition-all text-xs">
                       Hire Me &gt;
                     </button>
                   </div>
@@ -78,5 +63,5 @@ export default function MainPageContent({ status }: { status: boolean }) {
         <CompletedProjects ref={sectionRef} />
       </div>
     </div>
-  );
+  )
 }

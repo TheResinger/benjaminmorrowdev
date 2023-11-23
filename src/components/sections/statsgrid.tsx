@@ -1,4 +1,4 @@
-import GridItem from "../subcomponents/gridItem";
+import GridItem from '../subcomponents/gridItem'
 
 const StatsGrid = () => {
   return (
@@ -10,9 +10,9 @@ const StatsGrid = () => {
         <GridItem number={1} plus={false} text="Full-Stack Bootcamp" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-StatsGrid.displayName = 'StatsGrid';
+StatsGrid.displayName = 'StatsGrid'
 
-export default StatsGrid;
+export default StatsGrid

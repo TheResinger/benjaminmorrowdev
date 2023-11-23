@@ -1,8 +1,7 @@
-import Head from "next/head";
-import { NextPage } from "next/types";
+import Head from 'next/head'
+import { NextPage } from 'next/types'
 
-
-const Projects : NextPage = () => {
+const Projects: NextPage = () => {
   return (
     <div>
       <Head>
@@ -13,4 +12,4 @@ const Projects : NextPage = () => {
   )
 }
 
-export default Projects;
+export default Projects

@@ -13,20 +13,15 @@ const AboutMe = () => {
               <h4 className="text-3xl">Hello there! 👋 I&apos;m Benjamin</h4>
             </div>
             <div>
-              <p>
-                I&apos;m a passionate and dedicated Full Stack Software Developer
-                with a flair for crafting robust and user-friendly applications.
-                I thrive in the dynamic world of web development, where
-                creativity meets functionality.
-              </p>
+              <p>I&apos;m a passionate and dedicated Full Stack Software Developer with a flair for crafting robust and user-friendly applications. I thrive in the dynamic world of web development, where creativity meets functionality.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-AboutMe.displayName = 'AboutMe';
+AboutMe.displayName = 'AboutMe'
 
-export default AboutMe;
+export default AboutMe

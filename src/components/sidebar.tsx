@@ -1,27 +1,15 @@
-import Image from "next/image";
-import {
-  IconCheck,
-  IconDownload,
-  IconBrandLinkedin,
-  IconBrandGithub,
-  IconBrandTwitter,
-} from "@tabler/icons";
-import me from "../../public/face.png";
+import Image from 'next/image'
+import { IconCheck, IconDownload, IconBrandLinkedin, IconBrandGithub, IconBrandTwitter } from '@tabler/icons'
+import me from '../../public/face.png'
 
 export default function Sidebar({ status }: { status: boolean }) {
   return (
-    <aside className={` ${status ? "showBar navbarActive " : "w-0 lg:w-96"}`}>
+    <aside className={` ${status ? 'showBar navbarActive ' : 'w-0 lg:w-96'}`}>
       <section id="header">
         <div className="h-fit w-full p-8 header lg:h-fit flex flex-col">
           <div className="h-24 w-24 mb-4 mx-auto relative">
             <a href="https://www.linkedin.com/in/morrowbenjamin/">
-              <Image
-                src={me}
-                layout="fill"
-                className="rounded-full"
-                alt="Picture of me"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
+              <Image src={me} layout="fill" className="rounded-full" alt="Picture of me" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </a>
           </div>
           <h1 className="mb-2.5 text-center text-lg name">
@@ -94,29 +82,18 @@ export default function Sidebar({ status }: { status: boolean }) {
           </div>
         </div>
       </section>
-      <section
-        id="socials"
-        className={`place-items-center justify-between ${
-          status ? "" : "hidden lg:flex"
-        }`}
-      >
+      <section id="socials" className={`place-items-center justify-between ${status ? '' : 'hidden lg:flex'}`}>
         <div>
-          <a
-            href="https://www.linkedin.com/in/morrowbenjamin/"
-            aria-label="Quick link to my LinkedIn Page"
-          >
+          <a href="https://www.linkedin.com/in/morrowbenjamin/" aria-label="Quick link to my LinkedIn Page">
             <IconBrandLinkedin size={30} />
           </a>
         </div>
         <div>
-          <a
-            href="https://github.com/TheResinger"
-            aria-label="Quick link to my GitHub Page"
-          >
+          <a href="https://github.com/TheResinger" aria-label="Quick link to my GitHub Page">
             <IconBrandGithub size={30} />
           </a>
         </div>
       </section>
     </aside>
-  );
+  )
 }

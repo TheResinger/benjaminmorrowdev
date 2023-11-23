@@ -1,5 +1,5 @@
-import Carousel from "../subcomponents/carousel";
-import { forwardRef } from "react";
+import Carousel from '../subcomponents/carousel'
+import { forwardRef } from 'react'
 
 const CompletedProjects = forwardRef<HTMLElement>(({}, ref) => {
   return (
@@ -11,9 +11,9 @@ const CompletedProjects = forwardRef<HTMLElement>(({}, ref) => {
       </div>
       <Carousel />
     </section>
-  );
-});
+  )
+})
 
-CompletedProjects.displayName = 'CompletedProjects';
+CompletedProjects.displayName = 'CompletedProjects'
 
-export default CompletedProjects;
+export default CompletedProjects

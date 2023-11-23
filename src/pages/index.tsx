@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import type { NextPage } from "next";
-import Sidebar from "../components/sidebar";
-import MainPageContent from "../components/mainSection";
-import { useState } from "react";
-import { IconDotsVertical } from "@tabler/icons";
-import Head from "next/head";
+import type { NextPage } from 'next'
+import Sidebar from '../components/sidebar'
+import MainPageContent from '../components/mainSection'
+import { useState } from 'react'
+import { IconDotsVertical } from '@tabler/icons'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
-  const [navActive, setNavActive] = useState<boolean>(false);
+  const [navActive, setNavActive] = useState<boolean>(false)
 
   const toggleNav = () => {
-    setNavActive((current) => !current);
-    console.log(navActive);
-  };
+    setNavActive(current => !current)
+    console.log(navActive)
+  }
 
   return (
     <div>
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

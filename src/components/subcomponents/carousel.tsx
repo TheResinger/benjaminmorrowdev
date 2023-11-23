@@ -1,8 +1,8 @@
-import Slider from "react-slick";
-import ProjectItem from "./projectItem";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import data from "../../data/projectData.json"; //This should eventually be moved to a database call.
+import Slider from 'react-slick'
+import ProjectItem from './projectItem'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import data from '../../data/projectData.json' //This should eventually be moved to a database call.
 
 const Carousel = () => {
   const settings = {
@@ -35,30 +35,18 @@ const Carousel = () => {
         },
       },
     ],
-  };
+  }
   return (
     <div className="w-[85%] mx-auto">
       <Slider {...settings}>
         {data.map((item, index) => {
-          return (
-            <ProjectItem
-              key={index}
-              imagePath={item.imagePath}
-              imageClickPath={item.deployedPath}
-              projectName={item.projectName}
-              projectDescription={item.projectDescription}
-              githubLink={item.githubPath}
-              deployedLink={item.deployedPath}
-              deployed={item.deployed}
-              codebase={item.codebase}
-            />
-          );
+          return <ProjectItem key={index} imagePath={item.imagePath} imageClickPath={item.deployedPath} projectName={item.projectName} projectDescription={item.projectDescription} githubLink={item.githubPath} deployedLink={item.deployedPath} deployed={item.deployed} codebase={item.codebase} />
         })}
       </Slider>
     </div>
-  );
-};
+  )
+}
 
-Carousel.displayName = 'Carousel';
+Carousel.displayName = 'Carousel'
 
-export default Carousel;
+export default Carousel

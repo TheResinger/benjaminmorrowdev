@@ -30,17 +30,17 @@
     "projectName": "Placeholder",
     "imagePath": "/placeholder.png",
     "projectDescription": "Placeholder",
-    "githubPath": "https://github.com/TheResinger/cards",
-    "deployedPath": "https://cards.resinger.dev",
+    "githubPath": "",
+    "deployedPath": "",
     "deployed": false,
     "codebase": false
   },
   {
-    "projectName": "Cards",
+    "projectName": "Placeholder",
     "imagePath": "/placeholder.png",
     "projectDescription": "Placeholder",
-    "githubPath": "https://github.com/TheResinger/cards",
-    "deployedPath": "https://cards.resinger.dev",
+    "githubPath": "",
+    "deployedPath": "",
     "deployed": false,
     "codebase": false
   }
