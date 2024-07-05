@@ -5,7 +5,7 @@ interface ComponentTypes {
   scrollToElementRef?: any
 }
 
-const TopSection = ({ scrollToElementRef }: ComponentTypes) => {
+const TopSection = ({ scrollToElementRef }: ComponentTypes): JSX.Element => {
   const componentRef = useRef<null | HTMLSpanElement>(null)
 
   useEffect(() => {
