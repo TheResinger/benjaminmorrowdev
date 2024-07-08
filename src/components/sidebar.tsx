@@ -75,7 +75,7 @@ export default function Sidebar({ status }: { status: boolean }) {
             </ul>
           </div>
           <div className="flex cvDownload py-4 justify-center">
-            <a href="/cv.pdf" download className="flex">
+            <a href="/Benjamin Morrow Developer Resume.pdf" download className="flex">
               <span className="pr-2 cvLink">Download CV</span>
               <IconDownload color="#ffc108" size={20} />
             </a>
