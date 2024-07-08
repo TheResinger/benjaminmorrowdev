@@ -6,7 +6,7 @@ import data from '../../data/projectData.json' // This should eventually be move
 
 const Carousel = (): JSX.Element => {
   // let Data = data.Projects;
-  let Data = data.DummyData
+  let Data = data.Projects
 
   const settings = {
     accessibility: true,
