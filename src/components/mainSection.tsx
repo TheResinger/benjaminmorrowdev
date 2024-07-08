@@ -14,7 +14,7 @@ export default function MainPageContent({ status }: { status: boolean }) {
         <TopSection scrollToElementRef={scrollToElementRef} />
         <StatsGrid />
         <AboutMe />
-        {/* <CompletedProjects ref={scrollToElementRef} /> */}
+        <CompletedProjects ref={scrollToElementRef} />
       </div>
     </div>
   )

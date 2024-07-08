@@ -19,22 +19,13 @@
       "codebase": true
     },
     {
-      "projectName": "Cards",
-      "imagePath": "/placeholder.png",
-      "projectDescription": "An online Cards Against Humanity game",
-      "githubPath": "https://github.com/TheResinger/cards",
-      "deployedPath": "https://cards.resinger.dev",
-      "deployed": false,
-      "codebase": true
-    },
-    {
-      "projectName": "Placeholder",
-      "imagePath": "/placeholder.png",
-      "projectDescription": "Placeholder",
-      "githubPath": "",
+      "projectName": "Dashboard",
+      "imagePath": "/dashboard.png",
+      "projectDescription": "A performance tracking dashboard built for a previous employeer, rebuilt for generic use.",
+      "githubPath": "https://github.com/TheResinger/dashboard",
       "deployedPath": "",
       "deployed": false,
-      "codebase": false
+      "codebase": true
     },
     {
       "projectName": "Placeholder",
